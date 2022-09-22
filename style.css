@@ -192,6 +192,24 @@ nav label {
   margin-top: .75rem;
   margin-right: 1.25rem
 }
+#post {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem
+}
+#post img {
+  max-height: 24rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+#post ~ #project {
+  margin-left: 5rem;
+  margin-right: 5rem
+}
+#contact {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem
+}
 @media (min-width:991px) {
   #lista {
     background-color: transparent;
@@ -332,5 +350,14 @@ nav label {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 7rem
+  }
+  #post ~ #project {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem
+  }
+}
+@media (min-width:1200px) {
+  body {
+    width: 1200px
   }
 }

@@ -130,6 +130,21 @@ nav label {
   @apply float-right text-xl mt-3 mr-5;
 }
 
+#post {
+  @apply mx-10;
+}
+
+#post img {
+  @apply w-full max-h-96 object-cover;
+}
+
+#post ~ #project {
+  @apply mx-20;
+}
+
+#contact {
+  @apply mx-7;
+}
 /* ***************** */
 /* Media for Desktop */
 /* ***************** */
@@ -192,5 +207,18 @@ nav label {
   .triune div {
     flex: 1;
     @apply mx-4 mt-28;
+  }
+
+  #post ~ #project {
+    @apply mx-7;
+  }
+}
+
+/* ***************** */
+/*     Panoramico    */
+/* ***************** */
+@media (min-width: 1200px) {
+  body {
+    width: 1200px;
   }
 }
