@@ -145,6 +145,9 @@ nav label {
 #contact {
   @apply mx-7;
 }
+#contact input {
+  @apply w-1/2 block mb-7;
+}
 /* ***************** */
 /* Media for Desktop */
 /* ***************** */

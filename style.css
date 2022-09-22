@@ -210,6 +210,11 @@ nav label {
   margin-left: 1.75rem;
   margin-right: 1.75rem
 }
+#contact input {
+  display: block;
+  margin-bottom: 1.75rem;
+  width: 50%
+}
 @media (min-width:991px) {
   #lista {
     background-color: transparent;

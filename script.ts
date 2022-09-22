@@ -25,7 +25,7 @@ function homeApi<T>(): void {
           <img src="${newRoute}img/${post.id}.jpg" alt="${post.id}.jpg" />
           <h3>${post.title}</h3>
           <p>${post.body}</p>
-          <a href="post/?${post.id}">Learn More</a>
+          <a href="${newRoute}post/?${post.id}">Learn More</a>
           </div>`;
       });
       projectID.innerHTML = apiData;
@@ -62,7 +62,7 @@ function addPost(preventForm): void {
   phone.value;
   let msg = form.querySelector("#msg") as HTMLTextAreaElement;
   msg.value;
-  let out = document.querySelector("#out") as HTMLDivElement;
+  let out = document.querySelector("#") as HTMLDivElement;
 
   fetch(API_URL, {
     method: "POST",
@@ -81,20 +81,12 @@ function addPost(preventForm): void {
     .then((dataForm) => console.log(dataForm))
     .then(() => {
       let message = "";
-      message += `
-		   <div id="message2">
-		  <h6>Message Submitted</h6>
-	  </div> 
-		  `;
+      message += `<h3>Message Submitted</h3>`;
       out.innerHTML = message;
     })
     .catch(() => {
       let message = "";
-      message += `
-			 <div id="message2">
-			<h6>oh oh, there has been an error with your message!</h6>
-		</div> 
-			`;
+      message += `<h3>There has been an error with your message!</h3>`;
       out.innerHTML = message;
     });
 

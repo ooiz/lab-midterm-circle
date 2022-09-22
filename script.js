@@ -22,7 +22,7 @@ function homeApi() {
         .then(function (response) { return response.json(); })
         .then(function (res) {
         res.forEach(function (post) {
-            apiData += "<div>\n          <img src=\"".concat(newRoute, "img/").concat(post.id, ".jpg\" alt=\"").concat(post.id, ".jpg\" />\n          <h3>").concat(post.title, "</h3>\n          <p>").concat(post.body, "</p>\n          <a href=\"post/?").concat(post.id, "\">Learn More</a>\n          </div>");
+            apiData += "<div>\n          <img src=\"".concat(newRoute, "img/").concat(post.id, ".jpg\" alt=\"").concat(post.id, ".jpg\" />\n          <h3>").concat(post.title, "</h3>\n          <p>").concat(post.body, "</p>\n          <a href=\"").concat(newRoute, "post/?").concat(post.id, "\">Learn More</a>\n          </div>");
         });
         projectID.innerHTML = apiData;
     })["catch"](function (error) { return console.log(error); });
@@ -46,7 +46,7 @@ function addPost(preventForm) {
     phone.value;
     var msg = form.querySelector("#msg");
     msg.value;
-    var out = document.querySelector("#out");
+    var out = document.querySelector("#");
     fetch(API_URL, {
         method: "POST",
         headers: {
@@ -64,11 +64,11 @@ function addPost(preventForm) {
         .then(function (dataForm) { return console.log(dataForm); })
         .then(function () {
         var message = "";
-        message += "\n\t\t   <div id=\"message2\">\n\t\t  <h6>Message Submitted</h6>\n\t  </div> \n\t\t  ";
+        message += "<h3>Message Submitted</h3>";
         out.innerHTML = message;
     })["catch"](function () {
         var message = "";
-        message += "\n\t\t\t <div id=\"message2\">\n\t\t\t<h6>oh oh, there has been an error with your message!</h6>\n\t\t</div> \n\t\t\t";
+        message += "<h3>There has been an error with your message!</h3>";
         out.innerHTML = message;
     });
     contactname.value = "";
