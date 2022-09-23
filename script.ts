@@ -86,8 +86,8 @@ function addPost(preventForm) {
       out.innerHTML = message;
     });
 
-  contactname.value = "";
-  mail.value = "";
-  phone.value = "";
-  msg.value = "";
+  document.querySelector("#contactname").value = "";
+  document.querySelector("#mail").value = "";
+  document.querySelector("#phone").value = "";
+  document.querySelector("#msg").value = "";
 }

@@ -67,8 +67,8 @@ function addPost(preventForm) {
         message += "<h3>There has been an error with your message!</h3>";
         out.innerHTML = message;
     });
-    contactname.value = "";
-    mail.value = "";
-    phone.value = "";
-    msg.value = "";
+    document.querySelector("#contactname").value = "";
+    document.querySelector("#mail").value = "";
+    document.querySelector("#phone").value = "";
+    document.querySelector("#msg").value = "";
 }
