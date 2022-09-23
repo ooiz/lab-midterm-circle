@@ -46,7 +46,7 @@ function addPost(preventForm) {
     phone.value;
     var msg = form.querySelector("#msg");
     msg.value;
-    var out = document.querySelector("#");
+    var out = document.querySelector("#out");
     fetch(API_URL, {
         method: "POST",
         headers: {

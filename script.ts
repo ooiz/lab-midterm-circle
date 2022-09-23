@@ -62,7 +62,7 @@ function addPost(preventForm): void {
   phone.value;
   let msg = form.querySelector("#msg") as HTMLTextAreaElement;
   msg.value;
-  let out = document.querySelector("#") as HTMLDivElement;
+  let out = document.querySelector("#out") as HTMLDivElement;
 
   fetch(API_URL, {
     method: "POST",
