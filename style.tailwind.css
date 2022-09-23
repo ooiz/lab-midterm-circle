@@ -218,6 +218,9 @@ footer ul {
   @apply w-4/5 ml-8 border-none mb-12;
 }
 
+#out h3 {
+  @apply text-center mb-8;
+}
 /* ***************** */
 /* Media for Desktop */
 /* ***************** */

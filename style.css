@@ -361,6 +361,10 @@ footer ul {
   margin-bottom: 3rem;
   width: 80%
 }
+#out h3 {
+  margin-bottom: 2rem;
+  text-align: center
+}
 @media (min-width:991px) {
   #lista {
     background-color: transparent;
