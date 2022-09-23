@@ -47,11 +47,14 @@ nav img {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem
 }
-nav > a {
+nav > a:last-child {
   display: none;
   font-size: 1.125rem;
   line-height: 1.75rem;
   text-decoration: none
+}
+.active {
+  color: #00f!important
 }
 header {
   margin-left: 1.75rem;
@@ -155,10 +158,11 @@ header div:last-child img:first-child {
   background-image: url(img/orbit.png);
   --tw-bg-opacity: 1;
   background-color: rgba(31,41,55,var(--tw-bg-opacity));
+  background-size: cover;
   padding: 1.75rem 2.25rem 1rem
 }
 #menu,
-#testimony img {
+#testimony>img {
   display: none
 }
 #testimony h2 {
@@ -167,12 +171,45 @@ header div:last-child img:first-child {
   --tw-text-opacity: 1;
   color: rgba(255,255,255,var(--tw-text-opacity))
 }
-#testimony quote {
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+#profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2.25rem auto 3.5rem;
+  width: 11rem
+}
+#profile img {
+  border-radius: 9999px;
+  width: 3.5rem
+}
+#profile h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1rem;
   --tw-text-opacity: 1;
-  color: rgba(251,191,36,var(--tw-text-opacity))
+  color: rgba(96,165,250,var(--tw-text-opacity))
+}
+#profile h5 {
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  margin-top: .25rem;
+  margin-left: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(255,255,255,var(--tw-text-opacity))
+}
+#testimony p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: auto;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(251,191,36,var(--tw-text-opacity));
+  width: 100%
 }
 #services img {
   --tw-bg-opacity: 1;
@@ -181,6 +218,12 @@ header div:last-child img:first-child {
   margin-top: 2.25rem;
   margin-left: 2.25rem;
   padding: 1rem
+}
+#newletter {
+  --tw-bg-opacity: 1;
+  background-color: rgba(251,191,36,var(--tw-bg-opacity));
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem
 }
 #menu:checked ~ #lista {
   display: block
@@ -203,8 +246,8 @@ nav label {
   width: 100%
 }
 #post ~ #project {
-  margin-left: 5rem;
-  margin-right: 5rem
+  margin-left: 3.5rem;
+  margin-right: 3.5rem
 }
 #contact {
   margin-left: 1.75rem;
@@ -214,6 +257,45 @@ nav label {
   display: block;
   margin-bottom: 1.75rem;
   width: 50%
+}
+footer div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem
+}
+footer img {
+  width: 4rem
+}
+footer p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(107,114,128,var(--tw-text-opacity))
+}
+footer ul {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2;
+  list-style-position: inside;
+  list-style-type: none;
+  margin-left: -1rem;
+  --tw-text-opacity: 1;
+  color: rgba(37,99,235,var(--tw-text-opacity))
 }
 @media (min-width:991px) {
   #lista {
@@ -249,7 +331,7 @@ nav label {
   nav img {
     margin-top: 0
   }
-  nav > a {
+  nav > a:last-child {
     display: block;
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
@@ -308,16 +390,18 @@ nav label {
   }
   header img:nth-child(2) {
     display: block;
+    margin: auto;
     max-width: 20rem;
     position: absolute;
     top: 25%;
     right: 25%
   }
   header img:nth-child(3) {
+    bottom: -40%;
     display: block;
+    margin: auto;
     max-width: 20rem;
     position: absolute;
-    top: 75%;
     left: 75%
   }
   #logos {
@@ -360,9 +444,59 @@ nav label {
     margin-left: 1.75rem;
     margin-right: 1.75rem
   }
+  #testimony {
+    padding-top: 5rem;
+    padding-bottom: 5rem
+  }
+  #testimony > img {
+    display: block;
+    position: absolute;
+    width: 10rem
+  }
+  #testimony>img:nth-child(2),
+  #testimony>img:nth-child(5) {
+    right: 4rem
+  }
+  #testimony p {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    width: 50%
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 5rem
+  }
+  footer div:first-child {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-left: 1.75rem;
+    margin-right: 1.75rem
+  }
+  footer p {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left
+  }
+  footer ul {
+    width: 24rem
+  }
+  footer li {
+    padding-top: 1.25rem
+  }
 }
-@media (min-width:1200px) {
+@media (min-width:1400px) {
   body {
-    width: 1200px
+    width: 1200px;
+    margin: auto
   }
 }

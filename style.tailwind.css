@@ -28,9 +28,14 @@ nav img {
   @apply my-5;
 }
 
-nav > a {
+nav > a:last-child {
   @apply hidden text-lg no-underline;
 }
+
+.active {
+  color: blue !important;
+}
+
 header {
   @apply mx-7;
 }
@@ -99,10 +104,10 @@ header div:last-child img:first-child {
 
 #testimony {
   background-image: url("img/orbit.png");
-  @apply bg-gray-800 px-9 pt-7 pb-4;
+  @apply bg-gray-800 px-9 pt-7 pb-4 bg-cover;
 }
 
-#testimony img {
+#testimony > img {
   @apply hidden;
 }
 
@@ -110,14 +115,31 @@ header div:last-child img:first-child {
   @apply text-white my-12;
 }
 
-#testimony quote {
-  @apply text-yellow-400 font-bold text-xl;
+#profile {
+  @apply w-44 m-auto mt-9 mb-14 flex;
+}
+
+#profile img {
+  @apply rounded-full w-14;
+}
+
+#profile h4 {
+  @apply ml-4 my-0 text-blue-400 text-base font-normal;
+}
+#profile h5 {
+  @apply ml-4 mt-1 text-white text-sm font-normal;
+}
+#testimony p {
+  @apply text-yellow-400 font-bold text-2xl m-auto w-full text-center;
 }
 
 #services img {
   @apply bg-blue-100 p-4 rounded-full mt-9 ml-9;
 }
 
+#newletter {
+  @apply bg-yellow-400 py-7;
+}
 #menu {
   @apply hidden;
 }
@@ -139,7 +161,7 @@ nav label {
 }
 
 #post ~ #project {
-  @apply mx-20;
+  @apply mx-14;
 }
 
 #contact {
@@ -147,6 +169,22 @@ nav label {
 }
 #contact input {
   @apply w-1/2 block mb-7;
+}
+
+footer div:first-child {
+  @apply flex flex-col items-center my-5;
+}
+
+footer img {
+  @apply w-16;
+}
+footer p {
+  @apply text-gray-500 text-lg mx-16 text-center;
+}
+
+footer ul {
+  column-count: 3;
+  @apply text-blue-600 leading-loose list-none list-inside text-base font-bold -ml-4;
 }
 /* ***************** */
 /* Media for Desktop */
@@ -161,7 +199,7 @@ nav label {
   nav img {
     @apply mt-0;
   }
-  nav > a {
+  nav > a:last-child {
     @apply block min-w-max w-12;
   }
   nav label {
@@ -188,11 +226,12 @@ nav label {
     @apply pr-12;
   }
   header img:nth-child(2) {
-    @apply block absolute max-w-xs right-1/4 top-1/4;
+    @apply block absolute max-w-xs right-1/4 top-1/4 m-auto;
   }
 
   header img:nth-child(3) {
-    @apply block absolute max-w-xs left-3/4 top-3/4;
+    bottom: -40%;
+    @apply block absolute max-w-xs left-3/4  m-auto;
   }
 
   #logos {
@@ -215,13 +254,47 @@ nav label {
   #post ~ #project {
     @apply mx-7;
   }
+
+  #testimony {
+    @apply py-20;
+  }
+
+  #testimony > img {
+    @apply block absolute w-40;
+  }
+  #testimony > img:nth-child(2) {
+    @apply right-16;
+  }
+
+  #testimony > img:nth-child(5) {
+    @apply right-16;
+  }
+  #testimony p {
+    @apply w-1/2 my-24;
+  }
+  footer {
+    @apply flex flex-row m-20 justify-between;
+  }
+  footer div:first-child {
+    @apply items-start mx-7;
+  }
+  footer p {
+    @apply text-left mx-0;
+  }
+  footer ul {
+    @apply w-96;
+  }
+  footer li {
+    @apply pt-5;
+  }
 }
 
 /* ***************** */
-/*     Panoramico    */
+/*    Panoramico    */
 /* ***************** */
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   body {
     width: 1200px;
+    @apply m-auto;
   }
 }
