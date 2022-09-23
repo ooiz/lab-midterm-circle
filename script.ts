@@ -51,18 +51,14 @@ function postApi<T>(): void {
 
 const API_URL: string = "https://jsonplaceholder.typicode.com/comments";
 
-function addPost(preventForm): void {
+function addPost(preventForm) {
   preventForm.preventDefault();
 
-  let contactname = form.querySelector("#contactname") as HTMLInputElement;
-  contactname.value;
-  let mail = form.querySelector("#mail") as HTMLInputElement;
-  mail.value;
-  let phone = form.querySelector("#phone") as HTMLInputElement;
-  phone.value;
-  let msg = form.querySelector("#msg") as HTMLTextAreaElement;
-  msg.value;
   let out = document.querySelector("#out") as HTMLDivElement;
+  let contactname = document.querySelector("#contactname").value;
+  let mail = document.querySelector("#mail").value;
+  let phone = document.querySelector("#phone").value;
+  let msg = document.querySelector("#msg").value;
 
   fetch(API_URL, {
     method: "POST",

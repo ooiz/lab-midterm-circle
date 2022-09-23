@@ -38,15 +38,11 @@ function postApi() {
 var API_URL = "https://jsonplaceholder.typicode.com/comments";
 function addPost(preventForm) {
     preventForm.preventDefault();
-    var contactname = form.querySelector("#contactname");
-    contactname.value;
-    var mail = form.querySelector("#mail");
-    mail.value;
-    var phone = form.querySelector("#phone");
-    phone.value;
-    var msg = form.querySelector("#msg");
-    msg.value;
     var out = document.querySelector("#out");
+    var contactname = document.querySelector("#contactname").value;
+    var mail = document.querySelector("#mail").value;
+    var phone = document.querySelector("#phone").value;
+    var msg = document.querySelector("#msg").value;
     fetch(API_URL, {
         method: "POST",
         headers: {
