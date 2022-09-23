@@ -54,7 +54,7 @@ header p {
 }
 
 header a {
-  @apply mx-4 my-9 text-lg no-underline;
+  @apply block mx-4 my-9 text-lg no-underline;
 }
 
 /* header a:first-child { */
