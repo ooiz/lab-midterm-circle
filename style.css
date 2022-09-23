@@ -222,8 +222,42 @@ header div:last-child img:first-child {
 #newletter {
   --tw-bg-opacity: 1;
   background-color: rgba(251,191,36,var(--tw-bg-opacity));
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem
+  padding: 1.75rem
+}
+#newletter h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(31,41,55,var(--tw-text-opacity))
+}
+#newletter p {
+  padding-bottom: 1.5rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(107,114,128,var(--tw-text-opacity))
+}
+#newletter div {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255,255,255,var(--tw-bg-opacity));
+  height: 2rem;
+  padding: .75rem;
+  width: 14rem;
+  margin: 1.5rem auto
+}
+#newletter input {
+  border-style: none;
+  height: 1.5rem;
+  margin-left: .5rem;
+  position: absolute
+}
+#newletter a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 12rem
 }
 #menu:checked ~ #lista {
   display: block
@@ -248,15 +282,6 @@ nav label {
 #post ~ #project {
   margin-left: 3.5rem;
   margin-right: 3.5rem
-}
-#contact {
-  margin-left: 1.75rem;
-  margin-right: 1.75rem
-}
-#contact input {
-  display: block;
-  margin-bottom: 1.75rem;
-  width: 50%
 }
 footer div:first-child {
   display: -webkit-box;
@@ -296,6 +321,44 @@ footer ul {
   margin-left: -1rem;
   --tw-text-opacity: 1;
   color: rgba(37,99,235,var(--tw-text-opacity))
+}
+#contact {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem
+}
+#contact input,
+#contact textarea {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229,231,235,var(--tw-bg-opacity));
+  border-style: none;
+  display: block;
+  height: 3rem;
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+  margin-bottom: 1.75rem;
+  padding-left: 1rem;
+  width: 80%
+}
+#contact label {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(107,114,128,var(--tw-text-opacity))
+}
+#contact textarea {
+  font-family: Roboto;
+  height: 9rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding-top: .5rem
+}
+#contact button {
+  border-style: none;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+  width: 80%
 }
 @media (min-width:991px) {
   #lista {
@@ -462,6 +525,29 @@ footer ul {
     margin-bottom: 6rem;
     width: 50%
   }
+  #newletter {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  #newletter h2,
+  #newletter p {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%
+  }
+  #newletter div {
+    margin: 0 0 0 auto;
+    width: 33.333333%
+  }
+  #newletter a {
+    margin-left: 1rem
+  }
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -492,6 +578,24 @@ footer ul {
   }
   footer li {
     padding-top: 1.25rem
+  }
+  #contact {
+    margin-left: 7rem
+  }
+  #responsivecontact input {
+    width: 60%
+  }
+  #responsivecontact {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+  }
+  #responsivecontact > div {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%
   }
 }
 @media (min-width:1400px) {

@@ -28,21 +28,29 @@
           type="text"
           name="contactname"
           id="contactname"
-          placeholder="Enter your fullnname"
+          placeholder="Enter your full name"
           required
-        /><label for="mail">Email</label
-        ><input
-          type="text"
-          name="mail"
-          id="mail"
-          placeholder="Enter your email"
-        /><label for="phone">Phone Number</label
-        ><input
-          type="text"
-          name="phone"
-          id="phone"
-          placeholder="Enter your phone"
         />
+        <div id="responsivecontact">
+          <div>
+            <label for="mail">Email</label
+            ><input
+              type="text"
+              name="mail"
+              id="mail"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div>
+            <label for="phone">Phone Number</label
+            ><input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone"
+            />
+          </div>
+        </div>
         <label for="msg">Message*</label
         ><textarea
           name="msg"
@@ -52,7 +60,7 @@
           placeholder="Write your message here..."
           required
         ></textarea>
-        <button type="submit">Submit</button>
+        <button class="bluebtn" type="submit">Submit</button>
       </form>
     </div>
     <div id="out"></div>

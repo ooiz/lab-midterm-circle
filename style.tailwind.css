@@ -138,8 +138,27 @@ header div:last-child img:first-child {
 }
 
 #newletter {
-  @apply bg-yellow-400 py-7;
+  @apply bg-yellow-400 py-7 px-7;
 }
+#newletter h2 {
+  @apply text-3xl text-gray-800;
+}
+
+#newletter p {
+  @apply text-center text-gray-500 pb-6;
+}
+
+#newletter div {
+  @apply w-56 my-6 bg-white h-8 p-3 mx-auto;
+}
+
+#newletter input {
+  @apply absolute h-6 border-none ml-2;
+}
+#newletter a {
+  @apply block no-underline w-48 text-center mx-auto mb-8;
+}
+
 #menu {
   @apply hidden;
 }
@@ -164,13 +183,6 @@ nav label {
   @apply mx-14;
 }
 
-#contact {
-  @apply mx-7;
-}
-#contact input {
-  @apply w-1/2 block mb-7;
-}
-
 footer div:first-child {
   @apply flex flex-col items-center my-5;
 }
@@ -186,6 +198,26 @@ footer ul {
   column-count: 3;
   @apply text-blue-600 leading-loose list-none list-inside text-base font-bold -ml-4;
 }
+
+#contact {
+  @apply mx-7;
+}
+#contact input,
+#contact textarea {
+  @apply w-4/5 block mb-7 bg-gray-200 h-12 border-none pl-4 mx-7;
+}
+
+#contact label {
+  @apply text-lg text-gray-500 mx-7;
+}
+#contact textarea {
+  font-family: Roboto;
+  @apply h-36 text-sm pt-2;
+}
+#contact button {
+  @apply w-4/5 ml-8 border-none mb-12;
+}
+
 /* ***************** */
 /* Media for Desktop */
 /* ***************** */
@@ -272,6 +304,21 @@ footer ul {
   #testimony p {
     @apply w-1/2 my-24;
   }
+
+  #newletter {
+    flex-wrap: wrap;
+    @apply flex flex-row;
+  }
+  #newletter h2,
+  #newletter p {
+    flex-basis: 100%;
+  }
+  #newletter div {
+    @apply m-0 ml-auto w-1/3;
+  }
+  #newletter a {
+    @apply ml-4;
+  }
   footer {
     @apply flex flex-row m-20 justify-between;
   }
@@ -286,6 +333,20 @@ footer ul {
   }
   footer li {
     @apply pt-5;
+  }
+  #contact {
+    @apply ml-28;
+  }
+
+  #responsivecontact input {
+    @apply w-3/5;
+  }
+  #responsivecontact {
+    flex-basis: 20%;
+    @apply flex w-full;
+  }
+  #responsivecontact > div {
+    flex-basis: 50%;
   }
 }
 
